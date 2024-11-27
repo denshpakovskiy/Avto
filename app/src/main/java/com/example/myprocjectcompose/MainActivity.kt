@@ -25,64 +25,17 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.example.myprocjectcompose.ui.screens.MainScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            BoxOne()
-        }
-    }
-}
-
-@Composable
-private fun BoxOne() {
-    Column (
-        modifier = Modifier
-            .fillMaxHeight(0.4f)
-            .background(color = Color.Gray)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(top = 30.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-
-
-            Image(
-                modifier = Modifier
-                    .widthIn(150.dp)
-                    .heightIn(150.dp)
-                    .offset { IntOffset(0, 15) },
-                painter = painterResource(id = R.drawable.diamond),
-                contentDescription = "image"
-            )
-
-            Image(
-                modifier = Modifier
-                    .widthIn(150.dp)
-                    .heightIn(150.dp)
-                    .offset { IntOffset(0, -10) },
-                painter = painterResource(id = R.drawable.dostavka),
-                contentDescription = "image"
-            )
-
-            Column(modifier = Modifier.width(250.dp).height(250.dp)
-
-                .offset { IntOffset(0, -20) }) {
-                Image(
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.size(250.dp),
-                    painter = painterResource(id = R.drawable.avto),
-                    contentDescription = "image"
-
-                )
-
+            Column {
+                MainScreen()
             }
-
-
         }
     }
 }
+
