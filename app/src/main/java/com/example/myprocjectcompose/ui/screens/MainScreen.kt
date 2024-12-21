@@ -78,8 +78,6 @@ fun MainScreen() {
             contentDescription = "image"
 
         )
-
-
     }
 
     // Состояния для логина и пароля
@@ -127,29 +125,22 @@ fun MainScreen() {
                 }
             }
 
-
         )
 
-
-
-
-
     }
-
-
 
     Box(
         modifier = Modifier
             .fillMaxSize(1f)
-
-            .padding( 16.dp),
+            .padding(16.dp),
         contentAlignment = Alignment.BottomEnd
-    ){
+    ) {
         // Красная кнопка внизу
         Button(
             onClick = { /* Обработчик клика для кнопки */ },
-            modifier = Modifier.fillMaxWidth().
-            padding(bottom = 32.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 32.dp),
 
             colors = ButtonDefaults.buttonColors(Color.Red),
             shape = RoundedCornerShape(16.dp)
@@ -159,5 +150,5 @@ fun MainScreen() {
 
     }
 
-    }
+}
 
