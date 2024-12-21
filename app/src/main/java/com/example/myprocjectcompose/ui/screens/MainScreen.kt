@@ -126,9 +126,7 @@ fun MainScreen() {
             }
 
         )
-
     }
-
     Box(
         modifier = Modifier
             .fillMaxSize(1f)
@@ -147,8 +145,6 @@ fun MainScreen() {
         ) {
             Text(text = "Войти", color = Color.White, fontSize = 20.sp)
         }
-
     }
-
 }
 
